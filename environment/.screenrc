@@ -1,0 +1,80 @@
+# Default Shell
+shelltitle "$|bash"
+# use X scrolling mechanism
+termcapinfo xterm* ti@:te@
+# turn welcome message off
+startup_message off
+caption always "%{= wk} [%n] %t [ Host: %H Load: %l Time: %Y-%m-%d %c ]"
+hardstatus alwayslastline "%-Lw%{= rW}%50> %n%f %t %{-}%+Lw%<"
+# start at windows c screen 1
+bind c screen 1
+bind ^c screen 1
+bind 0 select 10
+screen 1
+screen 2
+screen 3
+screen 4
+screen 5
+screen 6
+screen 7
+screen 8
+screen 9
+#Keboard binding
+# bind Alt+z to move to previous window
+bindkey ^[z prev
+# bind Alt+x to move to next window
+bindkey ^[x next
+# bind Alt`~= to screen0~12
+bindkey "^[`" select 0
+bindkey "^[1" select 1
+bindkey "^[2" select 2
+bindkey "^[3" select 3
+bindkey "^[4" select 4
+bindkey "^[5" select 5
+bindkey "^[6" select 6
+bindkey "^[7" select 7
+bindkey "^[8" select 8
+bindkey "^[9" select 9
+bindkey "^[0" select 10
+bindkey "^[-" select 11
+bindkey "^[=" select 12
+vbell off
+# 配置文件：
+#     ~/.screenrc
+
+# 启动会话：
+#     screen -S name
+
+# 启动会话，同时打开指定程序：
+#     screen python
+#     screen vi foo.c
+
+# 会话操作：
+#     screen -r    -- 恢复会话
+#     screen -x    -- 共享会话
+#     screen -ls   -- 列出会话
+#     screen -d    -- 分离会话
+#     screen -dRR  -- 强制分离
+#     screen -S ${NAME} -X screen ${CMD}    --发送命令至会话窗口
+
+# 窗口操作：
+#     操作键（C-a）
+#     C-a c        -- 创建窗口
+#     C-a w        -- 查看窗口
+#     C-a d        -- 分离会话
+#     C-a A        -- 窗口命名
+#     C-a [0-9]    -- 切换至指定窗口
+#     C-a C-a      -- 切换至上次窗口
+#     C-a n        -- 后一个窗口
+#     C-a p        -- 前一个窗口
+#     C-a <ESC>    -- 复制/粘贴模式
+#     C-a _        -- 监视窗口（无活动时弹出提示）
+#     C-a M        -- 监视窗口（有活动时弹出提示）
+#     C-a S        -- 横向切割窗口
+#     C-a |        -- 竖向切割窗口
+#     C-a tab      -- 删除区域
+#     C-a x        -- 锁定会话
+#     C-a [        -- 复制、滚动模式
+#     C-a ]        -- 粘贴缓冲
+#     C-a ?        -- 列出操作
+#     C-a :        -- 输入命令
