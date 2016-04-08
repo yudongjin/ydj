@@ -1,0 +1,10 @@
+#alias
+alias ydj.source='source ~/.bashrc'
+alias ydj.edit.motd='vim '$ENVIRONMENT'/motd && sudo cp '$ENVIRONMENT'/motd /etc/motd'
+alias ydj.edit.bashrc='vim '$ENVIRONMENT'/bashrc'
+alias ydj.edit.alias='vim '$ENVIRONMENT'/alias'
+alias ydj.edit.environment='vim '$ENVIRONMENT'/environment'
+alias ydj.edit.screen='vim '$ENVIRONMENT'/screenrc'
+alias ydj.edit.vim='vim '$ENVIRONMENT'/vimrc'
+alias ydj.edit.hosts='sudo vim /etc/hosts'
+alias vi='vim'
